@@ -40,8 +40,11 @@ public class DataManagementServiceImpl implements DataManagementService{
             responseJSON.put("name",artistMap.get("name"));
             responseJSON.put("image-url",imageObj.get("#text"));
             responseJSON.put("info",((Map<?,?>)artistMap.get("bio")).get("summary"));
+            getTopSong(artistName);
         }
-        getTopSong(artistName);
+        else{
+            responseJSON.put("message","No artist found");
+        }
         return responseJSON;
     }
 
