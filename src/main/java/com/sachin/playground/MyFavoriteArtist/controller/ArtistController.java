@@ -21,7 +21,6 @@ public class ArtistController {
     @GetMapping(value = "/fav_artist", params = {"artist_name"})
     public ResponseEntity<?> getFavoriteArtistInfo(@RequestParam("artist_name") String artistName) throws Exception{
 
-        System.out.println(artistName);
         JSONObject res = dataManagementService.getArtistInfo(artistName);
         return new ResponseEntity<>(res, HttpStatus.OK);
     }
