@@ -1,8 +1,11 @@
 # My-Favorite-Artist
 
 URL:	/fav_artist
+
 Method:	GET
+
 Query Params	artist_name=[String]
+
 Success Response:
 ```
 Code:200
